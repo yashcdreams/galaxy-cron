@@ -2,7 +2,7 @@ name: Stop API Test
 
 on:
   schedule:
-    - cron: "11 14 * * 1-6"
+    - cron: "45 13 * * 1-6"
   workflow_dispatch:
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
         run: npm install -g apidog-cli
 
       - name: Running Test Scenario
-        run: apidog run --access-token ${{ secrets.APIDOG_ACCESS_TOKEN }} -t 818059 -e 2531384 -n 1 --delay-request 5000 -r html,json --out-dir reports/$(date +%Y-%m-%d_%H:%M:%S)
+        run: apidog run --access-token ${{ secrets.APIDOG_ACCESS_TOKEN }} -t 818059 -e 2531384 -n 1 --delay-request 5000 -r html,json --out-dir reports/$(date +%Y-%m-%d_%H:%M:%S) --out-file index
 
       - name: Configure Git
         run: |
@@ -35,3 +35,27 @@ jobs:
           git add reports/
           git commit -m "Add API test reports from automated run of Stop Tests" || echo "No changes to commit"
           git push origin HEAD:gh-pages
+
+      - name: Generate Directory Listings
+        uses: jayanta525/github-pages-directory-listing@v4.0.0
+        with:
+          FOLDER: reports
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: reports/
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
