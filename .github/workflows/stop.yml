@@ -2,7 +2,7 @@ name: Stop API Test
 
 on:
   schedule:
-    - cron: "45 13 * * 1-6"
+    - cron: "20 14 * * 1-6"
   workflow_dispatch:
 
 jobs:
