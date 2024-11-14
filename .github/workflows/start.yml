@@ -23,7 +23,7 @@ jobs:
         run: npm install -g apidog-cli
 
       - name: Running Test Scenario
-        run: apidog run --access-token ${{ secrets.APIDOG_ACCESS_TOKEN }} -t 784776 -e 2542612 -n 1 --delay-request 5000 -r html,json --out-dir reports/$(date +%Y-%m-%d_%H:%M:%S) --out-file index
+        run: apidog run --access-token ${{ secrets.APIDOG_ACCESS_TOKEN }} -t 825408 -e 2542612 -n 1 --delay-request 5000 -r html,json --out-dir reports/$(date +%Y-%m-%d_%H:%M:%S) --out-file index
 
       - name: Configure Git
         run: |
