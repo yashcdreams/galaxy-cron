@@ -1,0 +1,680 @@
+{
+  "result": {
+    "stats": {
+      "steps": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "iterations": {
+        "total": 1,
+        "pending": 0,
+        "failed": 0
+      },
+      "items": {},
+      "scripts": {
+        "total": 4,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequests": {
+        "total": 3,
+        "pending": 0,
+        "failed": 0
+      },
+      "requests": {
+        "total": 3,
+        "pending": 0,
+        "failed": 0
+      },
+      "socketRequests": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "tests": {
+        "total": 3,
+        "pending": 0,
+        "failed": 0
+      },
+      "assertions": {
+        "total": 5,
+        "pending": 0,
+        "failed": 0
+      },
+      "testScripts": {
+        "total": 3,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequestScripts": {
+        "total": 1,
+        "pending": 0,
+        "failed": 0
+      }
+    },
+    "timings": {
+      "responseTime": 731,
+      "responseAverage": 167,
+      "responseMin": 197,
+      "responseMax": 300,
+      "responseSd": 114.714137460617,
+      "dnsAverage": 0,
+      "dnsMin": 0,
+      "dnsMax": 0,
+      "dnsSd": 0,
+      "firstByteAverage": 0,
+      "firstByteMin": 0,
+      "firstByteMax": 0,
+      "firstByteSd": 0,
+      "started": 1731592166766,
+      "completed": 1731592182917
+    },
+    "transfers": {
+      "responseTotal": 6666
+    },
+    "failures": [],
+    "error": null
+  },
+  "isTestFlowControl": false,
+  "run": {
+    "stats": {
+      "steps": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      },
+      "iterations": {
+        "total": 1,
+        "pending": 0,
+        "failed": 0
+      },
+      "items": {},
+      "scripts": {
+        "total": 4,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequests": {
+        "total": 3,
+        "pending": 0,
+        "failed": 0
+      },
+      "requests": {
+        "total": 3,
+        "pending": 0,
+        "failed": 0
+      },
+      "socketRequests": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "tests": {
+        "total": 3,
+        "pending": 0,
+        "failed": 0
+      },
+      "assertions": {
+        "total": 5,
+        "pending": 0,
+        "failed": 0
+      },
+      "testScripts": {
+        "total": 3,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequestScripts": {
+        "total": 1,
+        "pending": 0,
+        "failed": 0
+      }
+    },
+    "timings": {
+      "responseTime": 731,
+      "responseAverage": 167,
+      "responseMin": 197,
+      "responseMax": 300,
+      "responseSd": 114.714137460617,
+      "dnsAverage": 0,
+      "dnsMin": 0,
+      "dnsMax": 0,
+      "dnsSd": 0,
+      "firstByteAverage": 0,
+      "firstByteMin": 0,
+      "firstByteMax": 0,
+      "firstByteSd": 0,
+      "started": 1731592166766,
+      "completed": 1731592182917
+    },
+    "transfers": {
+      "responseTotal": 6666
+    },
+    "failures": [],
+    "error": null
+  },
+  "options": {
+    "reporters": [
+      "html",
+      "json"
+    ],
+    "outDir": "reports/2024-11-14_13:49:23",
+    "outFile": "index",
+    "globalVar": [],
+    "envVar": [],
+    "color": "auto",
+    "delayRequest": 5000,
+    "timeoutRequest": 0,
+    "timeoutScript": 0,
+    "bigint": false,
+    "bigintLegacy": false,
+    "disableRejectUnauthorized": false,
+    "lang": "en",
+    "accessToken": "APS-36UEa8qahb68XivJvM8gJRPqiHdG5qcj",
+    "testScenario": [
+      784783
+    ],
+    "environment": 2542612,
+    "iterationCount": 1,
+    "enableBigInt": false,
+    "reporterOptions": {},
+    "reporter": {
+      "html": {},
+      "json": {}
+    },
+    "originalOutFile": "index",
+    "apidogVersion": "1.5.11",
+    "globals": {}
+  },
+  "collection": {
+    "apidogCli": "1.1.0",
+    "item": [
+      {
+        "item": [
+          {
+            "id": "cf93bbba-7ed2-497a-906e-0a3a85455f0a",
+            "name": "Session",
+            "request": {
+              "url": {
+                "path": [
+                  "Login"
+                ],
+                "host": [
+                  "{{base}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "User-Agent",
+                  "value": "app/1.0.0"
+                }
+              ],
+              "method": "GET",
+              "baseUrl": "",
+              "body": {},
+              "type": "http"
+            },
+            "response": [],
+            "event": [
+              {
+                "listen": "prerequest",
+                "script": {
+                  "id": "preProcessors.0.customScript",
+                  "type": "text/javascript",
+                  "exec": [
+                    "",
+                    "        if (JSON.setEnableBigInt) {",
+                    "          JSON.setEnableBigInt(undefined);",
+                    "        }",
+                    "        const jar = pm.cookies.jar();",
+                    "",
+                    "jar.clear(pm.request.url, function (error) {",
+                    "  throw error;",
+                    "});",
+                    "      "
+                  ]
+                }
+              },
+              {
+                "listen": "test",
+                "script": {
+                  "id": "postProcessors.0.customScript",
+                  "type": "text/javascript",
+                  "exec": [
+                    "",
+                    "        if (JSON.setEnableBigInt) {",
+                    "          JSON.setEnableBigInt(undefined);",
+                    "        }",
+                    "        pm.test(\"Requset is 200\", function () {",
+                    "    pm.response.to.have.status(200);",
+                    "});",
+                    "",
+                    "pm.test(\"Content-Type is text/html\", function () {",
+                    "    pm.expect(pm.response.headers.get('Content-Type'))",
+                    "        .to.match(/^text\\/html.*charset=UTF-8/i);",
+                    "});",
+                    "",
+                    "const rx = /\\s*value\\s*:\\s*['\"]([0-9a-f]{15,513})['\"]/;",
+                    "",
+                    "const body = pm.response.text();",
+                    "",
+                    "const match = body.match(rx);",
+                    "",
+                    "if (match && match[1]) {",
+                    "    pm.environment.set(\"csrf\", match[1]);    ",
+                    "    console.log(\"CSRF value:\", match[1]);",
+                    "} else {",
+                    "    throw new Error(\"Regex extraction failed: No CSRF match found\");",
+                    "}",
+                    "",
+                    "pm.test(\"CSRF extracted successfully\", function () {",
+                    "    pm.expect(pm.environment.get(\"csrf\")).to.not.be.undefined;",
+                    "});",
+                    "      "
+                  ]
+                }
+              }
+            ],
+            "responseDefinition": {
+              "createdAt": "2024-10-20T17:14:32.771Z",
+              "updatedAt": "2024-10-20T17:14:32.771Z",
+              "name": "Success",
+              "code": 200,
+              "contentType": "html",
+              "description": "",
+              "headers": [],
+              "mediaType": "",
+              "jsonSchema": {
+                "type": "object",
+                "properties": {},
+                "x-apidog-orders": []
+              },
+              "defaultEnable": true,
+              "projectId": 703846,
+              "ordering": 0,
+              "apiDetailId": 10921891,
+              "id": 13419123
+            },
+            "requestDefinition": {
+              "jsonSchema": {}
+            },
+            "metaInfo": {
+              "httpApiId": 10921891,
+              "httpApiCaseId": 14985312,
+              "httpApiName": "Session",
+              "httpApiPath": "{{base}}/Login",
+              "httpApiMethod": "get",
+              "httpApiCaseName": "Session",
+              "id": "356f3cf8-405a-492d-a181-5cf7396f129c",
+              "type": "http",
+              "name": "Session",
+              "relatedId": 784783,
+              "projectId": 703846,
+              "blockId": "356f3cf8-405a-492d-a181-5cf7396f129c"
+            },
+            "type": "http",
+            "protocolProfileBehavior": {
+              "useWhatWGUrlParser": true,
+              "disableUrlEncoding": false,
+              "disabledSystemHeaders": {},
+              "disableCookies": false
+            }
+          },
+          {
+            "id": "1642d613-b228-4de8-90e7-c529795a9124",
+            "name": "Login",
+            "request": {
+              "url": {
+                "path": [
+                  "php",
+                  "login"
+                ],
+                "host": [
+                  "{{base}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "User-Agent",
+                  "value": "app/1.0.0"
+                }
+              ],
+              "method": "POST",
+              "baseUrl": "",
+              "body": {
+                "mode": "urlencoded",
+                "urlencoded": [
+                  {
+                    "disabled": false,
+                    "key": "username",
+                    "value": "{{usernm}}"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "password",
+                    "value": "{{passwd}}"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "csrf_token",
+                    "value": "{{csrf}}"
+                  }
+                ]
+              },
+              "type": "http"
+            },
+            "response": [],
+            "event": [
+              {
+                "listen": "test",
+                "script": {
+                  "id": "postProcessors.0.customScript",
+                  "type": "text/javascript",
+                  "exec": [
+                    "",
+                    "        if (JSON.setEnableBigInt) {",
+                    "          JSON.setEnableBigInt(undefined);",
+                    "        }",
+                    "        pm.test(\"Login Requset is 200\", function () {",
+                    "    pm.response.to.have.status(200);",
+                    "});",
+                    "",
+                    "if (pm.response.code!==200) {",
+                    "    throw new Error(`Login failed ${pm.response.code} ${pm.response.status}`);",
+                    "}",
+                    "      "
+                  ]
+                }
+              }
+            ],
+            "responseDefinition": {
+              "createdAt": "2024-10-20T17:10:38.132Z",
+              "updatedAt": "2024-10-20T17:10:38.132Z",
+              "name": "Success",
+              "code": 200,
+              "contentType": "json",
+              "description": "",
+              "headers": [],
+              "mediaType": "",
+              "jsonSchema": {
+                "type": "object",
+                "properties": {},
+                "x-apidog-orders": []
+              },
+              "defaultEnable": true,
+              "projectId": 703846,
+              "ordering": 0,
+              "apiDetailId": 10921892,
+              "id": 13419124,
+              "schemaDefinitions": {}
+            },
+            "requestDefinition": {
+              "jsonSchema": {}
+            },
+            "metaInfo": {
+              "httpApiId": 10921892,
+              "httpApiCaseId": 14985311,
+              "httpApiName": "Login",
+              "httpApiPath": "{{base}}/php/login",
+              "httpApiMethod": "post",
+              "httpApiCaseName": "Login",
+              "id": "5944cb78-8332-475c-89f5-d4af595dbe91",
+              "type": "http",
+              "name": "Login",
+              "relatedId": 784783,
+              "projectId": 703846,
+              "blockId": "5944cb78-8332-475c-89f5-d4af595dbe91"
+            },
+            "type": "http",
+            "protocolProfileBehavior": {
+              "useWhatWGUrlParser": true,
+              "disableUrlEncoding": false,
+              "disabledSystemHeaders": {},
+              "disableCookies": false
+            }
+          },
+          {
+            "id": "aa3fedb8-bc11-4842-abaf-9d37b806abba",
+            "name": "Stop",
+            "request": {
+              "url": {
+                "path": [
+                  "php",
+                  "add_attendance"
+                ],
+                "host": [
+                  "{{base}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "User-Agent",
+                  "value": "app/1.0.0"
+                }
+              ],
+              "method": "POST",
+              "baseUrl": "",
+              "body": {
+                "mode": "urlencoded",
+                "urlencoded": [
+                  {
+                    "disabled": false,
+                    "key": "work_mode",
+                    "value": "WFO"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "page_name",
+                    "value": "Index.php"
+                  }
+                ]
+              },
+              "type": "http"
+            },
+            "response": [],
+            "event": [
+              {
+                "listen": "test",
+                "script": {
+                  "id": "postProcessors.0.customScript",
+                  "type": "text/javascript",
+                  "exec": [
+                    "",
+                    "        if (JSON.setEnableBigInt) {",
+                    "          JSON.setEnableBigInt(undefined);",
+                    "        }",
+                    "        pm.test(\"Attendance is 200\", function () {",
+                    "    pm.response.to.have.status(200);",
+                    "});",
+                    "",
+                    "if (pm.response.code!==200) {",
+                    "    throw new Error(`Attendance failed ${pm.response.code} ${pm.response.status}`);",
+                    "}",
+                    "      "
+                  ]
+                }
+              }
+            ],
+            "responseDefinition": {
+              "createdAt": "2024-10-20T17:10:50.414Z",
+              "updatedAt": "2024-10-20T17:10:50.414Z",
+              "name": "Success",
+              "code": 200,
+              "contentType": "json",
+              "description": "",
+              "headers": [],
+              "mediaType": "",
+              "jsonSchema": {
+                "type": "object",
+                "properties": {},
+                "x-apidog-orders": []
+              },
+              "defaultEnable": true,
+              "projectId": 703846,
+              "ordering": 0,
+              "apiDetailId": 10921893,
+              "id": 13419125,
+              "schemaDefinitions": {}
+            },
+            "requestDefinition": {
+              "jsonSchema": {}
+            },
+            "metaInfo": {
+              "httpApiId": 10921893,
+              "httpApiCaseId": 14985310,
+              "httpApiName": "Stop",
+              "httpApiPath": "{{base}}/php/add_attendance",
+              "httpApiMethod": "post",
+              "httpApiCaseName": "Stop",
+              "id": "78cbdb62-3e21-4c7d-bf44-abca2c808be2",
+              "type": "http",
+              "name": "Stop",
+              "relatedId": 784783,
+              "projectId": 703846,
+              "blockId": "78cbdb62-3e21-4c7d-bf44-abca2c808be2"
+            },
+            "type": "http",
+            "protocolProfileBehavior": {
+              "useWhatWGUrlParser": true,
+              "disableUrlEncoding": false,
+              "disabledSystemHeaders": {},
+              "disableCookies": false
+            }
+          }
+        ],
+        "name": "GalaxyStop"
+      }
+    ],
+    "info": {
+      "name": "GalaxyStop"
+    },
+    "dataSchemas": {},
+    "mockRules": {
+      "rules": [],
+      "enableSystemRule": true
+    },
+    "environment": {
+      "id": 2355339,
+      "name": "GalaxyPanel",
+      "baseUrl": "",
+      "baseUrls": {
+        "default": ""
+      },
+      "variable": {
+        "id": "24e82907-1fcc-4c17-891d-6d0c7e8657e6",
+        "name": "GalaxyPanel",
+        "values": [
+          {
+            "type": "any",
+            "value": "",
+            "key": "csrf",
+            "isBindInitial": false,
+            "initialValue": ""
+          },
+          {
+            "type": "any",
+            "value": "SAYANTANPAUL",
+            "key": "usernm",
+            "isBindInitial": false,
+            "initialValue": "SAYANTANPAUL"
+          },
+          {
+            "type": "any",
+            "value": "38135YW",
+            "key": "passwd",
+            "isBindInitial": false,
+            "initialValue": "38135YW"
+          },
+          {
+            "type": "any",
+            "value": "https://galaxy.1xl.com/GalaxyPanel",
+            "key": "base",
+            "isBindInitial": false,
+            "initialValue": "https://galaxy.1xl.com/GalaxyPanel"
+          }
+        ]
+      },
+      "type": "normal",
+      "parameter": {
+        "header": [],
+        "query": [],
+        "body": [],
+        "cookie": []
+      }
+    },
+    "globals": {
+      "baseUrl": "",
+      "baseUrls": {},
+      "variable": {
+        "id": "387ad3e5-009e-49d1-a9d6-c228fe16d0cc",
+        "values": []
+      },
+      "parameter": {
+        "header": [],
+        "query": [],
+        "body": [],
+        "cookie": []
+      }
+    },
+    "isServerBuild": true,
+    "isTestFlowControl": false,
+    "projectOptions": {
+      "enableJsonc": false,
+      "enableBigint": false,
+      "responseValidate": true,
+      "isDefaultUrlEncoding": 3,
+      "enableTestScenarioSetting": false,
+      "enableYAPICompatScript": false,
+      "publishedDocUrlRules": {
+        "defaultRule": "RESOURCE_KEY_ONLY",
+        "resourceKeyStandard": "LEGACY",
+        "enableResourceKeyStandard": true
+      },
+      "mockSettings": {},
+      "language": "en-US"
+    },
+    "ciRunningOptions": {
+      "environmentId": 2355339,
+      "useDataSetId": -1,
+      "iterationCount": 1,
+      "threadCount": 1,
+      "onError": "end",
+      "delayItem": 3000,
+      "saveReportDetail": "all",
+      "saveVariables": true,
+      "readGlobalCookie": false,
+      "saveGlobalCookie": true
+    },
+    "projectId": 703846,
+    "reportUrlTemplate": "https://app.apidog.com/link/project/{{projectId}}/api-test/test-report/{{id}}",
+    "reportExtra": {
+      "refScopes": [],
+      "runOptions": {
+        "environmentId": 2355339,
+        "useDataSetId": -1,
+        "iterationCount": 1,
+        "threadCount": 1,
+        "onError": "end",
+        "delayItem": 3000,
+        "saveReportDetail": "all",
+        "saveVariables": true,
+        "readGlobalCookie": false,
+        "saveGlobalCookie": true
+      }
+    },
+    "runnerId": "cf11556d-cd7c-4db9-92db-c394452e53ac",
+    "name": "GalaxyStop",
+    "protocolProfileBehavior": {
+      "disabledSystemHeaders": {
+        "postman-token": true
+      }
+    }
+  }
+}
